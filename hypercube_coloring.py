@@ -315,23 +315,26 @@ class hypercube(object):
                 if self.activeDirections[direction]:
                     randomEdgeInCurrentDirection=random.choice(self.remainingEdges[direction])
                     #print randomEdgeInCurrentDirection        
-                    colorIndex=0
+                    
                     if self.ruleCheck(randomEdgeInCurrentDirection,self.numColors+1):
                         self.numColors+=1
                     else: 
+                        colorsCheckedFromExistingColorsInCurrentDirection=0
                         #print self.remainingEdges
-                        while colorIndex<len(self.colors[direction]) and not self.ruleCheck(randomEdgeInCurrentDirection,self.colors[direction][colorIndex]):
-                            colorIndex+=1
-                            #print colorIndex
+                        while colorsCheckedFromExistingColorsInCurrentDirection<len(self.colors[direction]) and not self.ruleCheck(randomEdgeInCurrentDirection,self.colors[direction][colorsCheckedFromExistingColorsInCurrentDirection]):
+                            colorsCheckedFromExistingColorsInCurrentDirection+=1
+                        assert  colorsCheckedFromExistingColorsInCurrentDirection < len(self.colors[direction])
+                            #print colorsCheckedFromExistingColorsInCurrentDirection
                             
-                    if len(self.colors[direction]) != 0:
-                        assert  colorIndex < len(self.colors[direction])
+                    #if len(self.colors[direction]) != 0:
+                    #    assert  colorsCheckedFromExistingColorsInCurrentDirection < len(self.colors[direction])
 
                     self.colors=[]
                     self.activeDirections=[False for k in range(self.n)] 
                     self.anyMoreDirections=False
                     self.remainingEdges=[]
-           
+                    
+ 
                     for updateDirection in range(self.n):
                         remainingEdgesinCurrentDirection=[e for e in self.coloring.keys() if self.coloring[e]==0 and self.edges[e]==updateDirection]
                         self.remainingEdges.append(remainingEdgesinCurrentDirection)
