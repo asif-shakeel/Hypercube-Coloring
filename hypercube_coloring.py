@@ -218,7 +218,7 @@ class hypercube(object):
         
     def ruleCheck(self,edge,color):
         """
-        Given an edge, this function checks the coloring rule,  for all the non-adjacent pairs containing a vertex 
+        Given an edge, this function checks the coloring rule for all the non-adjacent pairs containing a vertex 
         from either end of the edge. It also colors edges that need to be colored with existent colors to  satisfy the coloring rule.
         Returns True if the rule is satisfied, or False if not. Coloring is unchanged if the rule is not satisfied.
         """
