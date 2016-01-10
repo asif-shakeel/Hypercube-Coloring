@@ -306,10 +306,7 @@ class hypercube(object):
         Starting with the current coloring, this function attempts to build up coloring consitent 
         with the minimum number of colors to be used in each direction.
         Returns True or False depending on success or failure of attempted coloring.
-        
-        CrazyEdges is a special case when  edges are such that they can be freely colorable without violating constraints. This occurs on certain edges, 
-        and we may wnat to know when that happens.
-        
+    
         """
         
 
@@ -362,7 +359,11 @@ class hypercube(object):
     
 
     def findCrazyEdges(self):
-    
+        """
+        CrazyEdges is a special case when  edges are such that they can be freely colorable without violating constraints. This occurs on certain edges, 
+        and we may wnat to know when that happens.
+        
+        """
         crazyEdges=[]
     
         for e in self.edges:
