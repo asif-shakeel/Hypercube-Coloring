@@ -411,26 +411,26 @@ Create a 4-cube. Assign initial colors to edges and check the coloring rule afte
 Then attempt to color the rest.
 """
 
-#ch4=hypercube(4)
-#print ch4.ruleCheck(('0000', '0001'),1)
-#print ch4.ruleCheck(('0010', '0011'),1)
-#print ch4.ruleCheck(('0100', '0101'),3)
-#print ch4.ruleCheck(('0110', '0111'),1)
-#print ch4.ruleCheck(('1000', '1001'),1)
-#print ch4.ruleCheck(('1010', '1011'),1)
-#print ch4.ruleCheck(('1100', '1101'),2)
-#print ch4.ruleCheck(('1110', '1111'),1)
-#ch4.setNumColors(3)
-#ch4.doColoring()
-#print "\n"+"Number of colors used =" + str(ch4.getNumColors())
-#print "\n"+"List of colors in each direction = "+ str(ch4.getColors())
-#print "\n"+"Coloring by edges:"
-#print ch4.getColoring()
-#print "\n"+"Color distribution by direction:"
-#print [ch4.getColoring()[x] for x in ch4.genDirectionalEdges(0)],'\n'
-#print [ch4.getColoring()[x] for x in ch4.genDirectionalEdges(1)],'\n'
-#print [ch4.getColoring()[x] for x in ch4.genDirectionalEdges(2)],'\n'
-#print [ch4.getColoring()[x] for x in ch4.genDirectionalEdges(3)],'\n'
+ch4=hypercube(4)
+print ch4.ruleCheck(('0000', '0001'),1)
+print ch4.ruleCheck(('0010', '0011'),1)
+print ch4.ruleCheck(('0100', '0101'),3)
+print ch4.ruleCheck(('0110', '0111'),1)
+print ch4.ruleCheck(('1000', '1001'),1)
+print ch4.ruleCheck(('1010', '1011'),1)
+print ch4.ruleCheck(('1100', '1101'),2)
+print ch4.ruleCheck(('1110', '1111'),1)
+ch4.setNumColors(3)
+ch4.doColoring()
+print "\n"+"Number of colors used =" + str(ch4.getNumColors())
+print "\n"+"List of colors in each direction = "+ str(ch4.getColors())
+print "\n"+"Coloring by edges:"
+print ch4.getColoring()
+print "\n"+"Color distribution by direction:"
+print [ch4.getColoring()[x] for x in ch4.genDirectionalEdges(0)],'\n'
+print [ch4.getColoring()[x] for x in ch4.genDirectionalEdges(1)],'\n'
+print [ch4.getColoring()[x] for x in ch4.genDirectionalEdges(2)],'\n'
+print [ch4.getColoring()[x] for x in ch4.genDirectionalEdges(3)],'\n'
 #print "Edges with all colors the same at both ends, their color and  number of edges of that color= " + str(ch4.findCrazyEdges())
 
 
@@ -440,39 +440,39 @@ Create a 5-cube. Assign initial colors to edges and check the coloring rule afte
 Then attempt to color the rest.
 """
 
-ch5=hypercube(5)
-print ch5.ruleCheck(('00000', '00001'),1)
-print ch5.ruleCheck(('00010', '00011'),1)
-print ch5.ruleCheck(('00100', '00101'),3)
-print ch5.ruleCheck(('00110', '00111'),1)
-print ch5.ruleCheck(('01000', '01001'),1)
-print ch5.ruleCheck(('01010', '01011'),1)
-print ch5.ruleCheck(('01100', '01101'),2)
-print ch5.ruleCheck(('01110', '01111'),1)
-print ch5.ruleCheck(('10000', '10001'),1)
-print ch5.ruleCheck(('10010', '10011'),1)
-print ch5.ruleCheck(('10100', '10101'),5)
-print ch5.ruleCheck(('10110', '10111'),1)
-print ch5.ruleCheck(('11000', '11001'),1)
-print ch5.ruleCheck(('11010', '11011'),1)
-print ch5.ruleCheck(('11100', '11101'),4)
-print ch5.ruleCheck(('11110', '11111'),1)
-ch5.setNumColors(5)
-ch5.doColoring()
-#initcol={('10010', '10011'): 1, ('00010', '00011'): 1, ('10000', '11000'): 12, ('10101', '11101'): 12, ('10100', '10110'): 14, ('01000', '01100'): 7, ('11110', '11111'): 1, ('10100', '11100'): 12, ('10101', '10111'): 14, ('01000', '01010'): 10, ('00010', '00110'): 7, ('00011', '01011'): 12, ('01000', '01001'): 1, ('11011', '11111'): 11, ('00000', '00001'): 1, ('00111', '10111'): 17, ('11100', '11101'): 4, ('11010', '11110'): 19, ('00100', '01100'): 12, ('00100', '00110'): 18, ('01001', '01011'): 18, ('01010', '11010'): 17, ('00110', '00111'): 1, ('00001', '00011'): 14, ('00101', '00111'): 18, ('00011', '00111'): 15, ('11010', '11011'): 1, ('10001', '11001'): 12, ('11001', '11101'): 11, ('01001', '01101'): 7, ('10100', '10101'): 5, ('10000', '10001'): 1, ('11001', '11011'): 18, ('00111', '01111'): 12, ('01100', '11100'): 17, ('00000', '00010'): 18, ('00001', '10001'): 9, ('11000', '11100'): 11, ('00001', '01001'): 12, ('00000', '00100'): 15, ('11000', '11001'): 1, ('00000', '01000'): 12, ('01110', '01111'): 1, ('01101', '11101'): 17, ('10111', '11111'): 8, ('10010', '10110'): 15, ('00010', '01010'): 12, ('00100', '00101'): 3, ('10010', '11010'): 12, ('10110', '11110'): 12, ('00011', '10011'): 17, ('01010', '01011'): 1, ('10000', '10010'): 6, ('01000', '11000'): 17, ('10001', '10011'): 14, ('00110', '01110'): 16, ('01100', '01110'): 18, ('10001', '10101'): 15, ('00110', '10110'): 17, ('10000', '10100'): 15, ('00001', '00101'): 15, ('00101', '10101'): 17, ('11000', '11010'): 14, ('01001', '11001'): 17, ('01011', '11011'): 13, ('01100', '01101'): 2, ('00010', '10010'): 17, ('00101', '01101'): 12, ('00000', '10000'): 17, ('10011', '10111'): 11, ('11101', '11111'): 14, ('01111', '11111'): 17, ('01011', '01111'): 11, ('01010', '01110'): 7, ('00100', '10100'): 17, ('01110', '11110'): 17, ('10110', '10111'): 1, ('10011', '11011'): 12, ('01101', '01111'): 18, ('11100', '11110'): 14}
-#for k in initcol.keys():
-#    print ch5.ruleCheck(k,initcol[k])
-print "\n"+"Number of colors used =" + str(ch5.getNumColors())
-print "\n"+"List of colors in each direction = "+ str(ch5.getColors())
-print "\n"+"Coloring by edges:"
-print ch5.getColoring()
-print "\n"+"Color distribution by direction:"
-print [ch5.getColoring()[x] for x in ch5.genDirectionalEdges(0)],'\n'
-print [ch5.getColoring()[x] for x in ch5.genDirectionalEdges(1)],'\n'
-print [ch5.getColoring()[x] for x in ch5.genDirectionalEdges(2)],'\n'
-print [ch5.getColoring()[x] for x in ch5.genDirectionalEdges(3)],'\n'
-print [ch5.getColoring()[x] for x in ch5.genDirectionalEdges(4)],'\n'
-#print "Edges with all colors the same at both ends, their color and  number of edges of that color= " + str(ch4.findCrazyEdges())
+#ch5=hypercube(5)
+#print ch5.ruleCheck(('00000', '00001'),1)
+#print ch5.ruleCheck(('00010', '00011'),1)
+#print ch5.ruleCheck(('00100', '00101'),3)
+#print ch5.ruleCheck(('00110', '00111'),1)
+#print ch5.ruleCheck(('01000', '01001'),1)
+#print ch5.ruleCheck(('01010', '01011'),1)
+#print ch5.ruleCheck(('01100', '01101'),2)
+#print ch5.ruleCheck(('01110', '01111'),1)
+#print ch5.ruleCheck(('10000', '10001'),1)
+#print ch5.ruleCheck(('10010', '10011'),1)
+#print ch5.ruleCheck(('10100', '10101'),5)
+#print ch5.ruleCheck(('10110', '10111'),1)
+#print ch5.ruleCheck(('11000', '11001'),1)
+#print ch5.ruleCheck(('11010', '11011'),1)
+#print ch5.ruleCheck(('11100', '11101'),4)
+#print ch5.ruleCheck(('11110', '11111'),1)
+#ch5.setNumColors(5)
+#ch5.doColoring()
+##initcol={('10010', '10011'): 1, ('00010', '00011'): 1, ('10000', '11000'): 12, ('10101', '11101'): 12, ('10100', '10110'): 14, ('01000', '01100'): 7, ('11110', '11111'): 1, ('10100', '11100'): 12, ('10101', '10111'): 14, ('01000', '01010'): 10, ('00010', '00110'): 7, ('00011', '01011'): 12, ('01000', '01001'): 1, ('11011', '11111'): 11, ('00000', '00001'): 1, ('00111', '10111'): 17, ('11100', '11101'): 4, ('11010', '11110'): 19, ('00100', '01100'): 12, ('00100', '00110'): 18, ('01001', '01011'): 18, ('01010', '11010'): 17, ('00110', '00111'): 1, ('00001', '00011'): 14, ('00101', '00111'): 18, ('00011', '00111'): 15, ('11010', '11011'): 1, ('10001', '11001'): 12, ('11001', '11101'): 11, ('01001', '01101'): 7, ('10100', '10101'): 5, ('10000', '10001'): 1, ('11001', '11011'): 18, ('00111', '01111'): 12, ('01100', '11100'): 17, ('00000', '00010'): 18, ('00001', '10001'): 9, ('11000', '11100'): 11, ('00001', '01001'): 12, ('00000', '00100'): 15, ('11000', '11001'): 1, ('00000', '01000'): 12, ('01110', '01111'): 1, ('01101', '11101'): 17, ('10111', '11111'): 8, ('10010', '10110'): 15, ('00010', '01010'): 12, ('00100', '00101'): 3, ('10010', '11010'): 12, ('10110', '11110'): 12, ('00011', '10011'): 17, ('01010', '01011'): 1, ('10000', '10010'): 6, ('01000', '11000'): 17, ('10001', '10011'): 14, ('00110', '01110'): 16, ('01100', '01110'): 18, ('10001', '10101'): 15, ('00110', '10110'): 17, ('10000', '10100'): 15, ('00001', '00101'): 15, ('00101', '10101'): 17, ('11000', '11010'): 14, ('01001', '11001'): 17, ('01011', '11011'): 13, ('01100', '01101'): 2, ('00010', '10010'): 17, ('00101', '01101'): 12, ('00000', '10000'): 17, ('10011', '10111'): 11, ('11101', '11111'): 14, ('01111', '11111'): 17, ('01011', '01111'): 11, ('01010', '01110'): 7, ('00100', '10100'): 17, ('01110', '11110'): 17, ('10110', '10111'): 1, ('10011', '11011'): 12, ('01101', '01111'): 18, ('11100', '11110'): 14}
+##for k in initcol.keys():
+##    print ch5.ruleCheck(k,initcol[k])
+#print "\n"+"Number of colors used =" + str(ch5.getNumColors())
+#print "\n"+"List of colors in each direction = "+ str(ch5.getColors())
+#print "\n"+"Coloring by edges:"
+#print ch5.getColoring()
+#print "\n"+"Color distribution by direction:"
+#print [ch5.getColoring()[x] for x in ch5.genDirectionalEdges(0)],'\n'
+#print [ch5.getColoring()[x] for x in ch5.genDirectionalEdges(1)],'\n'
+#print [ch5.getColoring()[x] for x in ch5.genDirectionalEdges(2)],'\n'
+#print [ch5.getColoring()[x] for x in ch5.genDirectionalEdges(3)],'\n'
+#print [ch5.getColoring()[x] for x in ch5.genDirectionalEdges(4)],'\n'
+##print "Edges with all colors the same at both ends, their color and  number of edges of that color= " + str(ch4.findCrazyEdges())
 
 
 
