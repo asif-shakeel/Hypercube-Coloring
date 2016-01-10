@@ -21,7 +21,7 @@ class hypercube(object):
         coloring: dictionary of edges and their colors.
         remainingEdges: those uncolored Edges that can potentially be assigned new colors.
         
-        Please refer to README.md for overall description of the idea and 
+        Please refer to README.md for overall description of the idea and how to run.
         """
         self.n=n
         self.vertices = [] 
