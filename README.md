@@ -9,4 +9,4 @@ Running the program:
 
 The examples in the code are for n=3,4,5 (where n is the hypercube dimension). The default example is n=4 hypercube (dimension 4 hypercube). The example has all the steps. It initially colors the edges in a particular direction (direction 0) by calling ruleCheck with the edge and color. Then it tries to color the rest of the hypercube by calling doColoring(). Then it lists the edges and respective colors. It gives a list of colors in each direciton, and distribution of the colors in each direction.
 
-WARNING: In case coloring fails, an Assertion Error is rasied as "Coloring Failed". Just rerun.
+WARNING: In case coloring fails, an Assertion Error is raised as "Coloring Failed". Just rerun.
